@@ -7,7 +7,7 @@ public class Main {
         ll.addattail(70);
         System.out.println("Before pop:");
         ll.display();
-        ll.pop();
+        ll.popLast();
         System.out.println("After pop");
         ll.display();
     }

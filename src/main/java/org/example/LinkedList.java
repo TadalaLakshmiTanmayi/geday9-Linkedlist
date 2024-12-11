@@ -56,6 +56,22 @@ public class LinkedList<T> {
             size--;
         }
     }
+    public void popLast() {
+        if (head == null) {
+            System.out.println("The list is empty, nothing to pop.");
+        } else if (head.next == null) {
+            head = null;  // If there is only one node, remove it
+            size--;
+        } else {
+            Node<T> current = head;
+            // Traverse to the second-to-last node
+            while (current.next != null && current.next.next != null) {
+                current = current.next;
+            }
+            current.next = null;  // Remove the last node
+            size--;
+        }
+    }
 
     public void display() {
         Node<T> current = head;
