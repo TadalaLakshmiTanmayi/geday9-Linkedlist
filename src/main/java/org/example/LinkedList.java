@@ -32,6 +32,22 @@ public class LinkedList<T> {
         }
         size++;
     }
+    public void insertAfter(T targetData, T newData) {
+        Node<T> current = head;
+        // Traverse the list to find the target node
+        while (current != null && !current.data.equals(targetData)) {
+            current = current.next;
+        }
+
+        if (current != null) {  // If the target node is found
+            Node<T> newNode = new Node<>(newData);  // Create a new node with the given data
+            newNode.next = current.next;  // Link the new node to the next node of the target node
+            current.next = newNode;  // Link the target node to the new node
+            size++;
+        } else {
+            System.out.println("Node with data " + targetData + " not found.");
+        }
+    }
 
     public void display() {
         Node<T> current = head;
