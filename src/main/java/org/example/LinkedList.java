@@ -72,6 +72,16 @@ public class LinkedList<T> {
             size--;
         }
     }
+    public boolean search(T data) {
+        Node<T> current = head;
+        while (current != null) {
+            if (current.data.equals(data)) {
+                return true;  // Return true if data matches
+            }
+            current = current.next;
+        }
+        return false;  // Return false if the node is not found
+    }
 
     public void display() {
         Node<T> current = head;

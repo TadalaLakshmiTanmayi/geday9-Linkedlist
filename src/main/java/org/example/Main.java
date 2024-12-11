@@ -5,10 +5,11 @@ public class Main {
         ll.addattail(56);
         ll.addattail(30);
         ll.addattail(70);
-        System.out.println("Before pop:");
-        ll.display();
-        ll.popLast();
-        System.out.println("After pop");
-        ll.display();
+        boolean found = ll.search(30);
+        if (found) {
+            System.out.println("Node with value 30 found.");
+        } else {
+            System.out.println("Node with value 30 not found.");
+        }
     }
 }
