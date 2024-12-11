@@ -48,6 +48,14 @@ public class LinkedList<T> {
             System.out.println("Node with data " + targetData + " not found.");
         }
     }
+    public void pop() {
+        if (head == null) {
+            System.out.println("The list is empty, nothing to pop.");
+        } else {
+            head = head.next; // Update the head to the next node
+            size--;
+        }
+    }
 
     public void display() {
         Node<T> current = head;
