@@ -1,7 +1,7 @@
 package org.example;
 
 public class LinkedList<T> {
-    private Node<T> head;
+    public Node<T> head;
     private int size;
 
     public LinkedList() {

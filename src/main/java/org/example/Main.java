@@ -1,15 +1,18 @@
 package org.example;
 public class Main {
     public static void main(String[] args) {
-        LinkedList<Integer> ll = new LinkedList<>();
-        ll.addattail(56);
-        ll.addattail(30);
-        ll.addattail(70);
-        boolean found = ll.search(30);
-        if (found) {
-            System.out.println("Node with value 30 found.");
-        } else {
-            System.out.println("Node with value 30 not found.");
-        }
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        linkedList.addattail(56);
+        linkedList.addattail(30);
+        linkedList.addattail(70);
+
+        System.out.println("Original Linked List:");
+        linkedList.display();
+
+        // Insert 40 after 30
+        linkedList.insertAfter(30, 40);
+
+        System.out.println("\nLinked List after inserting 40 after 30:");
+        linkedList.display();
     }
 }
