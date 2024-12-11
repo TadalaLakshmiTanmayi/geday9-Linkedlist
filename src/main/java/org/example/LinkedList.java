@@ -9,7 +9,7 @@ public class LinkedList<T> {
         this.size = 0;
     }
 
-    public void add(T data) {
+    public void addattail(T data) {
         Node<T> newNode = new Node<>(data);
         if (head == null) {
             head = newNode;
@@ -19,6 +19,16 @@ public class LinkedList<T> {
                 current = current.next;
             }
             current.next = newNode;
+        }
+        size++;
+    }
+    public void addatbeginning(T data) {
+        Node<T> newNode = new Node<>(data);
+        if (head == null) {
+            head = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
         }
         size++;
     }
