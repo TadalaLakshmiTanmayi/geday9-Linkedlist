@@ -72,6 +72,30 @@ public class LinkedList<T> {
             size--;
         }
     }
+    public void delete(T key) {
+        if (head == null) {
+            return; // List is empty, nothing to delete
+        }
+
+        // If the node to be deleted is the head
+        if (head.data.equals(key)) {
+            head = head.next;
+            size--;
+            return;
+        }
+
+        // Otherwise, find the node to delete
+        Node<T> current = head;
+        while (current.next != null && !current.next.data.equals(key)) {
+            current = current.next;
+        }
+
+        // If the node was found, remove it
+        if (current.next != null) {
+            current.next = current.next.next;
+            size--;
+        }
+    }
     public boolean search(T data) {
         Node<T> current = head;
         while (current != null) {

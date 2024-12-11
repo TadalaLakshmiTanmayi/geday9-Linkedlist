@@ -14,5 +14,12 @@ public class Main {
 
         System.out.println("\nLinked List after inserting 40 after 30:");
         linkedList.display();
+        linkedList.delete(40);
+
+        System.out.println("\nLinked List after deleting 40:");
+        linkedList.display();  // Display the list after deletion: 56 -> 30 -> 70
+
+        // Display the size of the list
+        System.out.println("\nSize of Linked List: " + linkedList.size());
     }
 }
